@@ -1,0 +1,35 @@
+<!doctype html>
+<head>
+	<title>Flashcards</title>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+<section id="cards-app">
+	<header id="header">
+		<h1>Flash cards</h1>
+		<input id="new-card" placeholder="new card" autofocus>
+	</header>
+	<section id="main">
+		<ul id="cards-list"></ul>
+	</section>
+	<footer id="footer"></footer>
+</section>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="js/lib/underscore.js"></script>
+<script src="js/lib/backbone.js"></script>
+<script src="js/lib/backbone.localStorage-min.js"></script>
+<script type="text/template" id="card-template">
+	<div class="card">
+		<label><%- title %></label>
+		<button class="destroy"></button>
+	</div>
+</script>
+<script type="text/javascript" src="js/models/card.js"></script>
+<script type="text/javascript" src="js/collections/cards.js"></script>
+<script type="text/javascript" src="js/views/cards.js"></script>
+<script type="text/javascript" src="js/views/app.js"></script>
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
