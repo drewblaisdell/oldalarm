@@ -1,8 +1,7 @@
 <!doctype html>
 <head>
 	<title>Flashcards</title>
-	<link rel="stylesheet" href="css/style.css">
-
+	<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <section id="cards-app">
@@ -22,9 +21,10 @@
 <script src="js/lib/backbone.localStorage-min.js"></script>
 <script type="text/template" id="card-template">
 	<div class="card">
-		<label><%- title %></label>
-		<button class="destroy"></button>
+		<label><%- front %></label>
+		<button class="destroy">x</button>
 	</div>
+	<input class="edit" value="<%- front %>">
 </script>
 <script type="text/javascript" src="js/models/card.js"></script>
 <script type="text/javascript" src="js/collections/cards.js"></script>

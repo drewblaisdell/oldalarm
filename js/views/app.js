@@ -12,6 +12,8 @@ app.AppView = Backbone.View.extend({
 	initialize: function() {
 		this.$input = this.$('#new-card');
 		this.$main = this.$('#main');
+
+		this.listenTo(app.Cards, 'add', this.addOne);
 	},
 
 	addOne: function(card){
@@ -20,7 +22,7 @@ app.AppView = Backbone.View.extend({
 	},
 	
 	createOnEnter: function(event){
-		if(event.which !== ENTER_KEY){
+		if(event.which !== ENTER_KEY || !this.$input.val().trim() ){
 			return;
 		}
 
