@@ -15,6 +15,7 @@ app.CardView = Backbone.View.extend({
 
 	initialize: function(){
 		this.listenTo(this.model, 'destroy', this.remove);
+		this.listenTo(this.model, 'change', this.render);
 	},
 
 	render: function(){
@@ -38,7 +39,7 @@ app.CardView = Backbone.View.extend({
 			return;
 		}
 
-		this.model.save({ title: this.$input.val() });
+		this.model.save({ front: this.$input.val() });
 
 		this.$el.removeClass('editing');
 	}

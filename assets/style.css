@@ -1,0 +1,33 @@
+body {
+	font-family: 'Helvetica Neue';
+	background: #ccc;
+	margin: 0;
+}
+
+#cards-app {
+	background: #fff;
+	width: 600px;
+	margin: 0 auto;
+	padding: 10px 50px;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+.card, .destroy {
+	font-size: 20px;
+}
+
+.edit {
+	display: none;
+}
+
+.editing .card {
+	display: none;
+}
+
+.editing .edit {
+	display: block;
+}

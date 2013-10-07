@@ -5,4 +5,8 @@ var app = app || {},
 
 $(function(){
 	new app.AppView();
+
+	app.router = new MyRouter();
+	
+	Backbone.history.start();
 });
