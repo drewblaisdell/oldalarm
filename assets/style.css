@@ -4,7 +4,7 @@ body {
 	margin: 0;
 }
 
-#cards-app {
+#app {
 	background: #fff;
 	width: 600px;
 	margin: 0 auto;
@@ -16,12 +16,20 @@ ul {
 	padding: 0;
 }
 
+label {
+	width: 123px;
+	display: inline-block;
+	margin-right: 3px;
+}
+
 .card, .destroy {
 	font-size: 20px;
 }
 
 .edit {
 	display: none;
+	font-size: 20px;
+	width: 123px;
 }
 
 .editing .card {
@@ -29,5 +37,5 @@ ul {
 }
 
 .editing .edit {
-	display: block;
+	display: inline-block;
 }

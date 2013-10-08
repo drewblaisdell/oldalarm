@@ -5,11 +5,17 @@ var app = app || {};
 var MyRouter = Backbone.Router.extend({
 	
 	routes: {
-		"about": "showAbout"
+		'deckeditor': 'showDeckEditor',
+		'home': 'defaultRoute',
+		'*actions': 'defaultRoute'
 	},
 
-	showAbout: function(){
-		console.log("about");
+	showDeckEditor: function(){
+		app.showView(new app.DeckView());
+	},
+
+	defaultRoute: function(){
+		app.showView(new app.HomeView());
 	}
 
 });

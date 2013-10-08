@@ -4,34 +4,47 @@
 	<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
-<section id="cards-app">
+<section id="app">
 	<header id="header">
-		<h1>Flash cards</h1>
-		<input id="new-card" placeholder="new card" autofocus>
+		<h1>repeat/remember</h1>
+		<ul class="links">
+			<li><a href="#home">Home</a></li>
+			<li><a href="#deckeditor">Editor</a></li>
+		</ul>
 	</header>
 	<section id="main">
-		<ul id="cards-list"></ul>
+
 	</section>
 	<footer id="footer"></footer>
 </section>
-
-<a href="#about">about</a>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/lib/underscore.js"></script>
 <script src="js/lib/backbone.js"></script>
 <script src="js/lib/backbone.localStorage-min.js"></script>
+<script type="text/template" id="home-template">
+	homepage text
+</script>
 <script type="text/template" id="card-template">
 	<div class="card">
 		<label><%- front %></label>
+		<label><%- back %></label>
 		<button class="destroy">x</button>
 	</div>
-	<input class="edit" value="<%- front %>">
+	<input class="edit front" value="<%- front %>">
+	<input class="edit back" value="<%- back %>">
+</script>
+<script type="text/template" id="deck-template">
+	<h1>flashcard editor</h1>
+	<input id="new-card-front" placeholder="front" autofocus>
+	<input id="new-card-back" placeholder="back">
+	<ul id="deck"></ul>
 </script>
 <script type="text/javascript" src="js/models/card.js"></script>
 <script type="text/javascript" src="js/routers/myrouter.js"></script>
-<script type="text/javascript" src="js/collections/cards.js"></script>
-<script type="text/javascript" src="js/views/cards.js"></script>
-<script type="text/javascript" src="js/views/app.js"></script>
+<script type="text/javascript" src="js/collections/deck.js"></script>
+<script type="text/javascript" src="js/views/home.js"></script>
+<script type="text/javascript" src="js/views/card.js"></script>
+<script type="text/javascript" src="js/views/deck.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 </body>
 </html>
