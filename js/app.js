@@ -1,7 +1,7 @@
 // js/app.js
 
 var app = app || {},
-	ENTER_KEY = 13;
+	conn;
 
 // thanks to Derick Bailey for this close function
 Backbone.View.prototype.close = function(){
@@ -25,6 +25,6 @@ app.showView = function(view){
 
 $(function(){
 	app.router = new MyRouter();
-	
 	Backbone.history.start();
+	
 });
